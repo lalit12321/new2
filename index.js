@@ -2,11 +2,11 @@ const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const path = require('path');
-
+const cors = require('cors')
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
-
+app.use(cors());
 // Serve the index.html file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './index.html')); // Adjust the path if necessary
