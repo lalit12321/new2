@@ -78,7 +78,7 @@
       }).addTo(map);
 
       const markers = {};
-      socket.on("recive-location", (data) => {
+      socket.on("receive-location", (data) => {
           const { id, latitude, longitude } = data;
           map.setView([latitude, longitude], 25);
           if (markers[id]) {
