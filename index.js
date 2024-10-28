@@ -9,7 +9,7 @@ const io = new Server(server);
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html')); // Adjust the path if necessary
+    res.sendFile(path.join(__dirname, './index.html')); // Adjust the path if necessary
 });
 
 // Socket.IO logic
