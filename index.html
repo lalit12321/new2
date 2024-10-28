@@ -39,12 +39,7 @@
   -->  
     <script type="applicatio/javascript" src="/socket.io/socket.io.js"></script> 
     <script>
-      const socket = io(server, {
-    cors: {
-        origin: '*', // Adjust this as needed for your security
-        methods: ['GET', 'POST'],
-    },
-});
+      const socket = io();
 
       socket.on('connect', () => {
           console.log('Socket connected:', socket.id);
